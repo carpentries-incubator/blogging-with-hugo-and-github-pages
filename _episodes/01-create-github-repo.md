@@ -1,7 +1,7 @@
 ---
 title: "Create and Setup your blog repository on GitHub"
-teaching: 10
-exercises: 1
+teaching: 1
+exercises: 10
 questions:
 - "How do we set up a GitHub repository for blogging?"
 objectives:
