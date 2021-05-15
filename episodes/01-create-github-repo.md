@@ -1,7 +1,7 @@
 ---
 title: "Create and Setup your blog repository on GitHub"
-teaching: 10
-exercises: 1
+teaching: 1
+exercises: 10
 questions:
 - "How do we set up a GitHub repository for blogging?"
 objectives:
@@ -22,14 +22,16 @@ We will do this entirely in the browser and we will also assume that your GitHub
     - Also add a README file to your repository and a license (the MIT license has been used in the example below but you might prefer [Creative Commons](https://github.com/idleberg/Creative-Commons-Markdown)).
     - Once you're happy, click "Create repository"
 
-| ![new_repo_page](fig/create_new_repo.png) |
+| ![new_repo_page](../fig/create_new_repo.png) |
 | :---: |
 | Example of how to fill in GitHub's create repository form |
 
 4. Once your GitHub repo has been created, click the large, green "code" button in the top-right, make sure "HTTPS" is selected, and click the clipboard icon to copy the contents of the text box.
 
-| ![github_repo](fig/../../fig/copy_repo_url.png) |
+| ![github_repo](../fig/copy_repo_url.png) |
 | :---: |
 | Where to find the address of your GitHub repo |
+
+Next we will make a local copy of this repository and set it up to create a blog site with Hugo.
 
 {% include links.md %}
