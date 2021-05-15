@@ -53,7 +53,7 @@ This is where we will make changes to our repository and initialise a new site u
 6. And now we use hugo to create our website!
    The below command will auto-generate all of the structure we need to generate html files using hugo's site template.
    The most important file this command will create is `config.toml` which will allow us to control the look and feel of our site.
-   (:sparkles: [Click here](https://learnxinyminutes.com/docs/toml/) for a tangent into the TOML file format! TL;DR it's a simpler form of YAML :sparkles:)
+   (For a tangent into the TOML file format, read this ["Learn X in Y minutes" explainer](https://learnxinyminutes.com/docs/toml/)!)
 
     ~~~
     hugo new site --force .
@@ -91,7 +91,7 @@ This is where we will make changes to our repository and initialise a new site u
     {: .language-toml}
 
     While you have the config file open, let's make a few more edits to personalise our site.
-    The templates provide a guide on common configuration options - Anatole's guide is [here](https://themes.gohugo.io/anatole/#modifying-the-configtoml).
+    The templates provide a guide on common configuration options - for example, [see Anatole's guide](https://themes.gohugo.io/anatole/#modifying-the-configtoml).
 
     Firstly, I strongly recommend updating the `baseURL` field to be that of our GitHub repository, like so:
 
@@ -151,6 +151,6 @@ This is where we will make changes to our repository and initialise a new site u
 
 Our blog doesn't look very exciting yet, but it's good to know that it works! Let's save what we have and we will deploy it online in the next episode.
 
-**Close your browser window displaying your website and run `Ctrl+C` in your terminal to stop the hugo server command.**
+**Close your browser window displaying your website and run <kbd>Ctrl</kbd>+<kbd>C</kbd> in your terminal to stop the hugo server command.**
 
 {% include links.md %}
