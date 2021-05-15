@@ -2,6 +2,6 @@
 layout: reference
 ---
 
-## Glossary
+<!-- ## Glossary -->
 
 {% include links.md %}
