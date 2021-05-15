@@ -22,13 +22,13 @@ We will do this entirely in the browser and we will also assume that your GitHub
     - Also add a README file to your repository and a license (the MIT license has been used in the example below but you might prefer [Creative Commons](https://github.com/idleberg/Creative-Commons-Markdown)).
     - Once you're happy, click "Create repository"
 
-| ![new_repo_page](https://i.imgur.com/MArQIPr.png) |
+| ![new_repo_page](fig/create_new_repo.png) |
 | :---: |
 | Example of how to fill in GitHub's create repository form |
 
 4. Once your GitHub repo has been created, click the large, green "code" button in the top-right, make sure "HTTPS" is selected, and click the clipboard icon to copy the contents of the text box.
 
-| ![github_repo](https://i.imgur.com/xmGrx9l.png) |
+| ![github_repo](fig/../../fig/copy_repo_url.png) |
 | :---: |
 | Where to find the address of your GitHub repo |
 
