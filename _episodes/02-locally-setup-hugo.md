@@ -25,7 +25,7 @@ This is where we will make changes to our repository and initialise a new site u
     ~~~
     {: .language-bash}
 
-3. Now clone the repository using the `git clone` command and pasting the address we copied in [step 4 of section 1](_episodes/01-create-github-repo.md).
+3. Now clone the repository using the `git clone` command and pasting the address we copied in [step 4 of section 1]({{ page.root }}{% link _episodes/01-create-github-repo.md %}).
    Here we are assuming your GitHub account is called `HelmUpgradeBot` and your repository is called `HelmUpgradeBot.github.io`.
 
     ~~~
