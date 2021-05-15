@@ -32,4 +32,6 @@ We will do this entirely in the browser and we will also assume that your GitHub
 | :---: |
 | Where to find the address of your GitHub repo |
 
+Next we will make a local copy of this repository and set it up to create a blog site with Hugo.
+
 {% include links.md %}
