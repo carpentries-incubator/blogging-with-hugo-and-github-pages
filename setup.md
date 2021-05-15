@@ -12,6 +12,7 @@ To prepare for this lesson you will need the following tools installed:
     - If using the command prompt, some of the commands I use below will be different and you may wish to consult this [cheatsheet](http://www.cs.columbia.edu/~sedwards/classes/2015/1102-fall/Command%20Prompt%20Cheatsheet.pdf)
 - `git` version control
   - [Installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for all three Operating Systems
+  - Follow [this guide](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) for one-time `git` setup the first time you use it
 - `hugo`
   - [Installation guide](https://gohugo.io/getting-started/installing/) for all three Operating Systems
 - A text editor of your choice! Examples:
