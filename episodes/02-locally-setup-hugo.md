@@ -123,7 +123,7 @@ This is where we will make changes to our repository and initialise a new site u
     ~~~
     {: .output}
 
-    > ## For your informatation
+    > ## For your information
     >
     > Now under the `themes/anatole` directory, we will have checked out a single reference of the anatole repository to build the content from.
     {: .callout}
@@ -185,7 +185,7 @@ This is where we will make changes to our repository and initialise a new site u
     > ## Theme-specific configuration
     >
     > Some of the information you've been asked you to add to your `config.toml` file will be specific to the "anatole" theme and will not work if you swap themes.
-    > You shoud always check the documentation and example site of the theme you wish to use as they will outline what fields can be used and what their expected values will be.
+    > You should always check the documentation and example site of the theme you wish to use as they will outline what fields can be used and what their expected values will be.
     {: .discussion}
 
 9. Now check your site builds by running the below command in your terminal, and then visiting <http://localhost:1313> in your browser.
