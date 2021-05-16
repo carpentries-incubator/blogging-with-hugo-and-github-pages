@@ -37,6 +37,16 @@ This is where we will make changes to our repository and initialise a new site u
     ~~~
     {: .language-bash}
 
+    ~~~
+    Cloning into 'HelmUpgradeBot.github.io'...
+    remote: Enumerating objects: 4, done.
+    remote: Counting objects: 100% (4/4), done.
+    remote: Compressing objects: 100% (4/4), done.
+    remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+    Receiving objects: 100% (4/4), done.
+    ~~~
+    {: .output}
+
 4. `git clone` will have created a new directory named after your repo, containing all the files currently in your repo (only the README and LICENSE files so far!).
    You can use the command `ls` to check this.
    Now change into that directory.
@@ -54,6 +64,11 @@ This is where we will make changes to our repository and initialise a new site u
     ~~~
     {: .language-bash}
 
+    ~~~
+    Switched to a new branch 'setup-hugo'
+    ~~~
+    {: .output}
+
 6. And now we use hugo to create our website!
    The below command will auto-generate all of the structure we need to generate html files using hugo's site template.
    The most important file this command will create is `config.toml` which will allow us to control the look and feel of our site.
@@ -63,6 +78,22 @@ This is where we will make changes to our repository and initialise a new site u
     hugo new site --force .
     ~~~
     {: .language-bash}
+
+    ~~~
+    Congratulations! Your new Hugo site is created in ~/source/github/HelmUpgradeBot/HelmUpgradeBot.github.io.
+
+    Just a few more steps and you're ready to go:
+
+    1. Download a theme into the same-named folder.
+    Choose a theme from https://themes.gohugo.io/ or
+    create your own with the "hugo new theme <THEMENAME>" command.
+    2. Perhaps you want to add some content. You can add single files
+    with "hugo new <SECTIONNAME>/<FILENAME>.<FORMAT>".
+    3. Start the built-in live server via "hugo server".
+
+    Visit https://gohugo.io/ for quickstart guide and full documentation.
+    ~~~
+    {: .output}
 
     > ## For your information
     >
@@ -80,6 +111,17 @@ This is where we will make changes to our repository and initialise a new site u
     git submodule add https://github.com/lxndrblz/anatole.git themes/anatole
     ~~~
     {: .language-bash}
+
+    ~~~
+    Cloning into '~/source/github/HelmUpgradeBot/HelmUpgradeBot.github.io/themes/anatole'...
+    remote: Enumerating objects: 1611, done.
+    remote: Counting objects: 100% (255/255), done.
+    remote: Compressing objects: 100% (177/177), done.
+    remote: Total 1611 (delta 120), reused 188 (delta 77), pack-reused 1356
+    Receiving objects: 100% (1611/1611), 4.79 MiB | 7.27 MiB/s, done.
+    Resolving deltas: 100% (844/844), done.
+    ~~~
+    {: .output}
 
     > ## For your informatation
     >
@@ -152,6 +194,34 @@ This is where we will make changes to our repository and initialise a new site u
     hugo server
     ~~~
     {: .language-bash}
+
+    ~~~
+    Start building sites …
+WARN 2021/05/16 21:17:56 found no layout file for "HTML" for kind "home": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2021/05/16 21:17:56 found no layout file for "HTML" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2021/05/16 21:17:56 found no layout file for "HTML" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+
+                   | EN
+-------------------+-----
+  Pages            |  3
+  Paginator pages  |  0
+  Non-page files   |  0
+  Static files     |  0
+  Processed images |  0
+  Aliases          |  0
+  Sitemaps         |  1
+  Cleaned          |  0
+
+    Built in 4 ms
+    Watching for changes in ~/source/github/HelmUpgradeBot/HelmUpgradeBot.github.io/{archetypes,content,data,layouts,static}
+    Watching for config changes in ~/source/github/HelmUpgradeBot/HelmUpgradeBot.github.io/config.toml
+    Environment: "development"
+    Serving pages from memory
+    Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+    Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+    Press Ctrl+C to stop
+    ~~~
+    {: .output}
 
 Our blog doesn't look very exciting yet, but it's good to know that it works! Let's save what we have and we will deploy it online in the next episode.
 
