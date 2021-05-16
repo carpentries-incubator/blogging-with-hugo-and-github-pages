@@ -96,6 +96,12 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
+      - name: Perform Spellcheck
+        uses: rojopolis/spellcheck-github-actions@0.14.0
+        with:
+          source_files: _site/**/*.md
+          task_name: Markdown
+
       - name: Commit and Push
         if: ${{ github.event_name == 'push' && steps.check-rmd.outputs.count != 0 && github.ref != 'refs/heads/gh-pages'}}
         run: |
