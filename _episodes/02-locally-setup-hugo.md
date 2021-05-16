@@ -7,9 +7,13 @@ questions:
 - "How do we initialise a blog site using Hugo?"
 - "How do we add and configure a theme for our site?"
 objectives:
-- ""
+- "Get a local copy of our repository onto our machines"
+- "Initialise a blog site with Hugo"
+- "Apply a theme to our blog site and set some basic configuration options"
 keypoints:
-- ""
+- "Get a local copy of a GitHub repository using the `git clone` command"
+- "Initialise a blog site with hugo using the `hugo new site` command"
+- "Add a blog theme as a submodule using the `git submodule add` command and configure the theme by editing the `config.toml` file"
 ---
 
 Now we will "clone" our GitHub repository - meaning we will add a copy of it to our local machines.
@@ -109,7 +113,7 @@ This is where we will make changes to our repository and initialise a new site u
 
     We are now going to create a new section in our config file called `[params]` and list some more metadata about our site there.
 
-    Give your website a cool name in the `title` field, describe what your site is about in the `desription` field, and add your name under the `author` field:
+    Give your website a cool name in the `title` field, describe what your site is about in the `description` field, and add your name under the `author` field:
 
     ~~~
     [params]
