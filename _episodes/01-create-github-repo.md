@@ -13,7 +13,7 @@ keypoints:
 In this first episode, we will create the repository that will host our website on GitHub.
 We will do this entirely in the browser and we will also assume that your GitHub account is called `HelmUpgradeBot`.
 
-1. Go to https://github.com and sign in to your account
+1. Go to <https://github.com> and sign in to your account
 2. In the top, right-hand corner of the browser, click the plus `+` symbol and select "New repository" from the dropdown menu.
 3. Give your repository the name `HelmUpgradeBot.github.io`.
    This is a special GitHub repository that will act as your website.
