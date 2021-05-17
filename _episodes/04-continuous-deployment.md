@@ -119,12 +119,14 @@ jobs:
     This clones the repo like we did manually in [step 3 of episode 2]({{ page.root }}{% link _episodes/02-locally-setup-hugo.md %}).
     The `fetch-depth: 0` line asks GitHub to not download the full repo history, only the most recent commit, and the `submodules: true` line asks GitHub to also checkout the submodules we depend on.
     Without this, our `themes` folder won't be populated with the info we need to build the site!
-  - Step 2 installs the latest version of Hugo
+  - Step 2 installs the latest version of Hugo.
   - Step 3 builds the site using Hugo.
     The `--minify` flag ensures that the output HTML files are compressed to take up the minimum amount of space required.
     The ouput files are stored in a folder called `public/`.
   - Step 4 runs a tool called `htmlproofer` over the generated HTML files in `public`.
     This tool checks for things like broken links across the site.
+    - This step has the `continue-on-error` flag set to `true` allowing the deployment process to continue even if `htmlproofer` discovers errors.
+    This is because this step will fail since, for example, we do not setup [favicons](https://en.wikipedia.org/wiki/Favicon) during this lesson and this is one of the properties the tool checks.
   - Step 5 will commit the HTML files to a new branch on our repo called `gh-pages`.
     It only publishes the HTML files contained in the `public` directory as they are the only ones required to create the site at this point.
     - Note this step has an `if` statement that states this step should only be executed when the event that triggered the workflow was a push to the `main` branch (most commonly a merged PR).
