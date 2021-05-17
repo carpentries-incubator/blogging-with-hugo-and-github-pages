@@ -1,13 +1,17 @@
 ---
 title: "Push our Hugo site to GitHub"
-teaching: 0
-exercises: 0
+teaching: 1
+exercises: 5
 questions:
-- ""
+- "How do we save and track our local changes in `git`?"
+- "How do we send our changes to our GitHub repository?"
+- "How do we open and merge a Pull Request?"
 objectives:
-- ""
+- "Push the Hugo site to GitHub and use a Pull Request to bring it into the `main` branch"
 keypoints:
-- ""
+- "Local changes are saved and tracked using the `git add` and `git commit` commands"
+- "The remote repository on GitHub is synced with a local repository using `git push`. The reverse sync is achieved with `git pull`."
+- "A Pull Request can be opened and merged in the GitHub browser interface"
 ---
 
 In this episode, we will push the changes we made in our local repository back to the remote repository on GitHub.
