@@ -1,13 +1,17 @@
 ---
 title: "Automating Website Deployment"
-teaching: 0
-exercises: 0
+teaching: 5
+exercises: 10
 questions:
-- ""
+- "What is Continuous Deployment and what does it mean in the context of our site?"
+- "How do we enable GitHub Actions on our repository?"
+- "What needs to go into a GitHub Actions workflow to enable Continuous Deployment of our site?"
 objectives:
-- ""
+- "Understand what the concept of Continuous Deployment means for a website"
+- "Understand the content of a GitHub Actions workflow file that enables Continuous Deployment to GitHub Pages"
 keypoints:
-- ""
+- "Continuous Deployment of a website involves rebuilding and republishing the site with every change"
+- "GitHub Action workflows are YAML files that contain triggers, jobs and steps that are performed automatically. GitHub automatically detects these files in the `.github/workflows` folder."
 ---
 
 In this episode, we will use [GitHub Actions](https://docs.github.com/en/actions) to define a Continuous Deployment pipeline that will automatically update our webite when we merge Pull Requests in GitHub.
