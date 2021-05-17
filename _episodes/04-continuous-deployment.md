@@ -44,7 +44,7 @@ The concept of Continuous Deployment is as follows:
     {: .callout}
 
 3. Create a `cd.yml` (`cd` is short for **C**ontinuous **D**eployment) file inside the `.github/workflows` folder and open it in your favourite text editor.
-   ([Click here](https://blog.stackpath.com/yaml/) for a tangent into the YAML (`.yml`) file format!)
+   (Find out more about the YAML (`.yml`) file format in [this blog post](https://blog.stackpath.com/yaml/).)
 4. We have a workflow ready for us to use below which you should feel free to copy and paste into your `cd.yml` file, and then we'll go through each section.
 
 > ## Whitespace **matters** with YAML so be careful when you copy and paste!
