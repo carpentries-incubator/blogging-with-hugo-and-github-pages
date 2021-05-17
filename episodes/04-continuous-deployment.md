@@ -172,7 +172,7 @@ We now need to configure some more settings for the GitHub repo.
 3. We will add a branch protection rule to prevent changes that could break our site from being deployed.
    Click "Add rule".
 
-    | ![add_branch_protection_rule](https://i.imgur.com/ovFhyLT.png) |
+    | ![add_branch_protection_rule](../fig/add_branch_protection_rule.png) |
     | :---: |
     | Add a branch protection rule to the repo |
 
@@ -181,7 +181,7 @@ We now need to configure some more settings for the GitHub repo.
    (You may be asked to reenter your GitHub password.)
    This means that the `build-and-deploy-site` job **MUST** pass, otherwise merging the PR will be blocked.
 
-    | ![create_branch_protection_rule](https://i.imgur.com/NhMHYOz.png) |
+    | ![create_branch_protection_rule](../fig/create_branch_protection_rule.png) |
     | :---: |
     | Create the branch protection rule |
 
@@ -190,7 +190,7 @@ We now need to configure some more settings for the GitHub repo.
 6. In the "Source" section, select `gh-pages` from the "Branch" dropdown and leave the folder dropdown as `/ (root)`.
    Then click "Save".
 
-    | ![configure_github_pages](https://i.imgur.com/hrXDSUl.png) |
+    | ![configure_github_pages](../fig/configure_github_pages.png) |
     | :---: |
     | Configure GitHub Pages in the repo Settings |
 
