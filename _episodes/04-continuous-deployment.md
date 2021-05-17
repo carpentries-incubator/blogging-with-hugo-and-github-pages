@@ -48,6 +48,16 @@ The concept of Continuous Deployment is as follows:
 4. We have a workflow ready for us to use below which you should feel free to copy and paste into your `cd.yml` file, and then we'll go through each section.
 
 > ## Whitespace **matters** with YAML so be careful when you copy and paste!
+>
+> What does “whitespace matters” mean?
+> Why is it important?
+>
+> It means that the spaces in the file carry meaning. A bit like how in Python if you indent lines then it knows they’re part of a for loop.
+> The way that a for loop ends is that you don’t indent the next line.
+> Think about replacing the whitespace (either spaces or tabs) with characters, such as dots.
+> 4 dots (....) which represent 4 spaces (    ) tells the file that this new information belongs to the line above.
+> In some programming languages whitespace doesn’t matter - newlines might matter but **where** you put the words is only important for what it looks like, not what actually happens.
+> Python, Markdown, YAML all depend on whitespace to understand what the developer means.
 {: .discussion}
 
 ~~~
