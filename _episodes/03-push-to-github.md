@@ -16,6 +16,8 @@ keypoints:
 
 In this episode, we will push the changes we made in our local repository back to the remote repository on GitHub.
 
+For more detail on the workflows used in this episode, see the [Version Control with Git](http://swcarpentry.github.io/git-novice/) Software Carpentry lesson.
+
 1. First of all, we need to tell `git` to track all of the changes we have created.
    We do this by **adding** them to git's staging area.
 
