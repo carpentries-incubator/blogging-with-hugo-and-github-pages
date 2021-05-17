@@ -67,7 +67,7 @@ It'll be good for people to know who we are by adding a photo of us or a logo th
    ~~~
    {: .language-bash}
 
-    | ![homepage_with_profile_pic](https://i.imgur.com/SbOddIV.png) |
+    | ![homepage_with_profile_pic](../fig/blog_homepage_profile_pic.png) |
     | :---: |
     | Blog homepage with profile picture |
 
@@ -154,7 +154,7 @@ hugo new path/to/content.md
    ~~~
    {: .language-bash}
 
-    | ![homepage_with_blog_post](https://i.imgur.com/a4tDtVw.png) |
+    | ![homepage_with_blog_post](../fig/blog_homepage_with_post.png) |
     | :---: |
     | Homepage with a blog post listed |
 
@@ -166,7 +166,7 @@ The beauty of using Markdown to build a blogsite is that it is a very simple fil
 However, blogs often contain _more_ than just words (images, tweets, videos) and Markdown is not always equipped to cope with all of these extra sources.
 The solution would be to manually construct a HTML block to embed the content, which breaks the simplicity of the Markdown document.
 
-| ![md_with_html](https://i.imgur.com/1Y35l5w.png) |
+| ![md_with_html](../fig/html_embedding.png) |
 | :---: |
 | An example of a Markdown file using HTML blocks to embed a Google calendar and Twitter timeline into a blog page |
 
@@ -176,7 +176,7 @@ So let's experiment by adding a tweet to our blog post.
 Here is a tweet claiming how cool HelmUpgradeBot is: <https://twitter.com/drsarahlgibson/status/1390312389346828291>.
 All we need to embed this tweet into our blog post is the tweet ID, or the **numeric** part of the tweet URL.
 
-| ![tweet_id](https://i.imgur.com/7yDTkq4.png) |
+| ![tweet_id](../fig/tweet_id.png) |
 | :---: |
 | The ID of a tweet is the numerical section of the URL |
 
@@ -219,7 +219,7 @@ hugo server
 ~~~
 {: .language-bash}
 
-| ![blog_with_embedded_tweet](https://i.imgur.com/uD5enj2.png) |
+| ![blog_with_embedded_tweet](../fig/blog_with_tweet.png) |
 | :---: |
 | Blog post with embedded tweet |
 
