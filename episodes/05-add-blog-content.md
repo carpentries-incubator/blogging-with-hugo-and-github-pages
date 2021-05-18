@@ -1,16 +1,32 @@
 ---
 title: "Generating Blog Content"
-teaching: 0
-exercises: 0
+teaching: 1
+exercises: 10
 questions:
-- ""
+- "How do we add a profile picture to our blog site?"
+- "How do we create a new blog post with Hugo?"
+- "What frontmatter does Hugo create for posts?"
+- "How do we embed external content into our posts?"
 objectives:
-- ""
+- "Add a profile picture to our blog site"
+- "Create our first blog post"
+- " Embed a tweet into our blog post"
 keypoints:
-- ""
+- "Files to be included in the site, without modification, should be placed under the `static` folder"
+- "New content is generated with the `hugo new` command"
+- "Hugo automatically generates `title`, `date` and `draft` frontmatter for content"
+- "External content is embedded into posts using shortcodes"
 ---
 
+> ## For your information
+>
+> The episodes we have covered so far involve setting up the repository to publish the website on GitHub Pages.
+> These should be considered one-time tasks that may only need tweaking once setup.
+> In this episode, we will cover the more regular processes of publishing new content, such as blog posts.
+{: .callout}
+
 Let's start to make our site a little more attractive by adding some content.
+Let's give our site a profile picture, publish our first blog post and embed some external content into it - in this case, a tweet.
 
 First, check out a new branch to add content to:
 
@@ -24,7 +40,7 @@ Switched to a new branch 'adding-content'
 ~~~
 {: .output}
 
-#### Profile Picture
+### Profile Picture
 
 It'll be good for people to know who we are by adding a photo of us or a logo that reflects our branding!
 
@@ -72,7 +88,7 @@ It'll be good for people to know who we are by adding a photo of us or a logo th
     | Blog homepage with profile picture |
 
 **Close your browser window displaying your website and run <kbd>Ctrl</kbd>+<kbd>C</kbd> in your terminal to stop the hugo server command.**
-#### Creating a blog post
+### Creating a blog post
 
 Next let's add our first blog post!
 This is equivalent to creating a new Markdown file with some extra metadata that Hugo will read.
@@ -160,7 +176,7 @@ hugo new path/to/content.md
 
 **Close your browser window displaying your website and run <kbd>Ctrl</kbd>+<kbd>C</kbd> in your terminal to stop the hugo server command.**
 
-#### Embedding External Content using Hugo Shortcodes
+### Embedding External Content using Hugo Shortcodes
 
 The beauty of using Markdown to build a blogsite is that it is a very simple file format - what you type is what is rendered.
 However, blogs often contain _more_ than just words (images, tweets, videos) and Markdown is not always equipped to cope with all of these extra sources.
@@ -243,7 +259,7 @@ Other shortcodes you will find useful are:
 > Check out [some examples](https://github.com/sgibson91/sgibson91.github.io/tree/main/layouts/shortcodes).
 {: .callout}
 
-#### Pushing to GitHub and Merging to `main`
+### Pushing to GitHub and Merging to `main`
 
 Let's save what we've done to GitHub and set it live on the website using the same add, commit, push, open and merge Pull Request that we've used in episodes [2]({{ page.root }}{% link _episodes/02-locally-setup-hugo.md %}) and [3]({{ page.root }}{% link _episodes/03-push-to-github.md %}).
 
