@@ -65,7 +65,7 @@ The concept of Continuous Deployment is as follows:
 {: .discussion}
 
 ~~~
-name: Build and Deploy Site
+{% raw %}name: Build and Deploy Site
 
 on:
   push:
@@ -104,11 +104,10 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{"{{"}} secrets.GITHUB_TOKEN {{}}}}
-          publish_dir: ./public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public{% endraw %}
 ~~~
 {: .language-yaml}
-<!-- Some formatting nastiness in "Deploy to GitHub Pages" to make sure Jekyll renders secrets.GITHUB_TOKEN as expected -->
 
 - The `name` parameter defines what our workflow should be called
 - The `on` block beginning defines what events should trigger our workflow to run.
