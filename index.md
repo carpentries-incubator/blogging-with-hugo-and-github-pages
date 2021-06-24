@@ -22,4 +22,9 @@ You can see an example of the author's site linked below.
 > See the [Discussion section](_extras/discuss.md) to understand why this lesson will use the terminal and Hugo, compared to GitHub Pages' built-in Jekyll templates.
 {: .prereq}
 
+You can also follow along with the YouTube video below.
+It's quite fast so feel free to pause and rewind as much as you need!
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/_STFQc9Y2zY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
 {% include links.md %}
