@@ -129,7 +129,15 @@ This is where we will make changes to our repository and initialise a new site u
     {: .callout}
 
 8. Now we need to update `config.toml` to use the theme.
-   Open up the file in your favourite text editor and add the following line to the bottom.
+   Open up the file in your favourite text editor.
+   This is how you would open it in `nano`.
+
+   ~~~
+   nano config.toml
+   ~~~
+   {: .language-bash}
+
+   Now add the following line to the bottom of the file.
 
     ~~~
     theme = "anatole"
@@ -163,7 +171,7 @@ This is where we will make changes to our repository and initialise a new site u
     author = "HelmUpgradeBot"
     description = "Automatic blogging from a GitHub bot"
     ~~~
-    {: .language.toml}
+    {: .language-toml}
 
     All together, your config file should now look like this:
 
