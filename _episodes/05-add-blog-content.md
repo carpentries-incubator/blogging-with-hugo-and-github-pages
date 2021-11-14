@@ -190,7 +190,7 @@ Hugo's solution to this problem is to provide a set of [shortcodes](https://gohu
 So let's experiment by adding a tweet to our blog post.
 
 Here is a tweet claiming how cool HelmUpgradeBot is: <https://twitter.com/drsarahlgibson/status/1390312389346828291>.
-All we need to embed this tweet into our blog post is the tweet ID, or the **numeric** part of the tweet URL.
+All we need to embed this tweet into our blog post is the tweet ID (the **numeric** part of the tweet URL) and the user who tweeted it.
 
 | ![tweet_id](../fig/tweet_id.png) |
 | :---: |
@@ -199,7 +199,7 @@ All we need to embed this tweet into our blog post is the tweet ID, or the **num
 The syntax for embedding a tweet is then:
 
 ~~~
-{% raw %}{{< tweet TWEET_ID_HERE >}}{% endraw %}
+{% raw %}{{< tweet user="TWIITER_USER_HERE" id="TWEET_ID_HERE" >}}{% endraw %}
 ~~~
 {: .source}
 
