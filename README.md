@@ -1,5 +1,7 @@
 # Blogging with Hugo and GitHub Pages
 
+This repository generates the corresponding lesson website from [The Carpentries](https://carpentries.org/) repertoire of lessons.
+
 ## Contributing
 
 We welcome all contributions to improve the lesson! Maintainers will do their best to help you if you have any
@@ -19,7 +21,15 @@ Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%
 
 Current maintainers of this lesson are
 
-* Sarah Gibson (@sgibson91)
+* Sarah Gibson ([**@sgibson91**](https://github.com/sgibson91))
 
-[lesson-example]: https://carpentries.github.io/lesson-example
+## Authors
+
+A list of contributors to the lesson can be found in [AUTHORS](AUTHORS)
+
+## Citation
+
+To cite this lesson, please consult with [CITATION](CITATION)
+
 [issues]: https://github.com/sgibson91/blogging-with-hugo-and-github-pages/issues
+[lesson-example]: https://carpentries.github.io/lesson-example
