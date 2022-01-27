@@ -26,7 +26,7 @@ To prepare for this lesson you will need the following tools installed:
 
 ## Installing the most recent version of Hugo on Linux
 
-When running `sudo spt-get install hugo` this does not always install the most recent version of hugo.
+When running `sudo apt-get install hugo` this does not always install the most recent version of hugo.
 If you find this is the case, you can try the following steps.
 
 1. Go to <https://github.com/gohugoio/hugo/releases> and find the latest release
