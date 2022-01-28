@@ -35,8 +35,20 @@ If you find this is the case, you can try the following steps.
 3. Once downloaded, run the following commands to install this version.
 
    ~~~
-   sudo updates && sudo update hugo
+   sudo dpkg -i {{ path to .deb file }}
    ~~~
    {: .language-bash}
+4. Check the version has installed
+
+   ~~~
+   hugo version
+   ~~~
+   {: .language-bash}
+5. Clean up the `.deb` file
+
+   ~~~
+   rm {{ path to .deb file }}
+   ~~~
+   {: .language-bash }
 
 {% include links.md %}
