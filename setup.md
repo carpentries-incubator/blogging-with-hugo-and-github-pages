@@ -15,6 +15,7 @@ To prepare for this lesson you will need the following tools installed:
   - Follow [this guide](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) for one-time `git` setup the first time you use it
 - `hugo`
   - [Installation guide](https://gohugo.io/getting-started/installing/) for all three Operating Systems
+  - If you are installing on Linux, see the below section on [installing the most recent version](#installing-the-most-recent-version-of-hugo-on-linux).
 - A text editor of your choice! Examples:
   - VSCode
   - nano
@@ -22,5 +23,32 @@ To prepare for this lesson you will need the following tools installed:
   - Notepad++
   - emacs
   - vim
+
+## Installing the most recent version of Hugo on Linux
+
+When running `sudo apt-get install hugo` this does not always install the most recent version of hugo.
+If you find this is the case, you can try the following steps.
+
+1. Go to <https://github.com/gohugoio/hugo/releases> and find the latest release
+2. Download the `.deb` file for Linux according to your architecture.
+   This is most likely the file that ends `_Linux-64bit.deb`.
+3. Once downloaded, run the following commands to install this version.
+
+   ~~~
+   sudo dpkg -i {{ path to .deb file }}
+   ~~~
+   {: .language-bash}
+4. Check the version has installed
+
+   ~~~
+   hugo version
+   ~~~
+   {: .language-bash}
+5. Clean up the `.deb` file
+
+   ~~~
+   rm {{ path to .deb file }}
+   ~~~
+   {: .language-bash }
 
 {% include links.md %}
