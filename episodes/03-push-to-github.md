@@ -29,15 +29,8 @@ For more detail on the workflows used in this episode, see the [Version Control 
   git add .
   ```
   
-  :::::::::::::::::::::::::::::::::::::::::  callout
-  
-  ## For your information
-  
   As we saw before, here the `.` means "please add everything in this current location."
-  
-  
-  ::::::::::::::::::::::::::::::::::::::::::::::::::
-  
+
   If you now run `git status` you should see a similar output as below.
   
   ```bash
@@ -71,14 +64,7 @@ For more detail on the workflows used in this episode, see the [Version Control 
    create mode 160000 themes/anatole
   ```
   
-  :::::::::::::::::::::::::::::::::::::::::  callout
-  
-  ## For your information
-  
   Now if we run `git status` again, we should see the message `nothing to commit, working tree clean`
-  
-  
-  ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 3. Now we push this commit from our local commit up to the GitHub server using the `git push` command.
   In the below command, `origin` is a reference to the original repo we setup on GitHub, and `setup-hugo` represents an instruction to create a new branch on the GitHub-hosted repo with the same name as our locally-created branch.
@@ -100,9 +86,7 @@ For more detail on the workflows used in this episode, see the [Version Control 
 4. If we head back onto GitHub to our repo's page, we should now see a banner informing us that a branch has been updated and providing us with an option to "Compare \& pull request".
   Click that big, green button!
 
-| ![](fig/repo_with_pr_banner.png){alt='updated\_github\_page'}                                        | 
-| :----------------------------------------------------------------: |
-| GitHub repo page with a banner and "Compare \& pull request" button | 
+![GitHub repo page with a banner and "Compare \& pull request" button](fig/repo_with_pr_banner.png){alt='GitHub repo page with a banner and "Compare \& pull request" button'}
 
 You will be redirected to GitHub's interface for opening a Pull Request (PR).
 Give your PR an informative title and a descriptive summary in the relevant boxes, then click "Create pull request".
@@ -112,9 +96,7 @@ However, we'll set up our tests next, so go ahead and click "Merge pull request"
 
 If you head back over to the repo's landing page, you'll see our changes have now been added to the `main` branch - but that doesn't mean our blog is live and deployed yet!
 
-| ![](fig/updated_repo.png){alt='updated\_repo\_home'}                                          | 
-| :----------------------------------------------------------------: |
-| The GitHub repo's `main` branch with the hugo files now added to it                                                 | 
+![The GitHub repo's `main` branch with the hugo files now added to it](fig/updated_repo.png){alt="The GitHub repo's `main` branch with the hugo files now added to it"}
 
 First, let's update our local copy of the repo and then we can add a GitHub Action workflow to automatically deploy our website for us.
 
@@ -130,14 +112,7 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ```
 
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## For your information
-
-This time, we did not use the `-b` flag in the `git checkout` command because we are **switching to a branch that already exists**, not creating a new one.
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
+Note that, this time, we did not use the `-b` flag in the `git checkout` command because we are **switching to a branch that already exists**, not creating a new one.
 
 ```bash
 git pull

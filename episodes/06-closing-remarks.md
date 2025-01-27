@@ -30,7 +30,7 @@ From here, you can:
 - Or try implementing a new theme from <https://themes.gohugo.io/>!
   You can do this by running the `git submodule add` command again with your new theme and then updating the `config.toml` file.
 
-::::::::::::::::::::::::::::::::::::::  discussion
+::::::::::::::::::::::::::::::::::::::  callout
 
 ## Using a new theme
 

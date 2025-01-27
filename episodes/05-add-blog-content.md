@@ -21,16 +21,9 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## For your information
-
 The episodes we have covered so far involve setting up the repository to publish the website on GitHub Pages.
 These should be considered one-time tasks that may only need tweaking once setup.
 In this episode, we will cover the more regular processes of publishing new content, such as blog posts.
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Let's start to make our site a little more attractive by adding some content.
 Let's give our site a profile picture, publish our first blog post and embed some external content into it - in this case, a tweet.
@@ -71,26 +64,17 @@ It'll be good for people to know who we are by adding a photo of us or a logo th
   profilePicture = "images/profile_pic.png"
   ```
   
-  :::::::::::::::::::::::::::::::::::::::::  callout
-  
-  ## For your information
-  
-  Notice how we didn't have to define the path as `static/images/profile_pic.png` here?
+  **Note:** notice how we didn't have to define the path as `static/images/profile_pic.png` here?
   That's because `static` is a special folder to Hugo that it knows how to parse.
   In fact, it's called `static` as Hugo won't modify these files in any way, just import them into the HTML files it creates - hence they are "static".
   
-  
-  ::::::::::::::::::::::::::::::::::::::::::::::::::
-
 4. Run the `hugo server` command again and visit [http://localhost:1313](https://localhost:1313) in your browser. You should now see your image on your site! :tada:
   
   ```bash
   hugo server
   ```
   
-  | ![](fig/blog_homepage_profile_pic.png){alt='homepage\_with\_profile\_pic'}                                                                                | 
-| :--------------------------------------------------------------------------------------------------------------: |
-| Blog homepage with profile picture                                                                               | 
+  ![Blog homepage with profile picture](fig/blog_homepage_profile_pic.png){alt='Blog homepage with profile picture'}                                                    
 
 **Close your browser window displaying your website and run <kbd>Ctrl</kbd>\+<kbd>C</kbd> in your terminal to stop the hugo server command.**
 
@@ -107,14 +91,8 @@ The command looks like this:
 hugo new path/to/content.md
 ```
 
-:::::::::::::::::::::::::::::::::::::::::  callout
+**Note:** if any of the folders `path/` or `to/` don't already exist under `content/`, Hugo will create them automatically.
 
-## For your information
-
-If any of the folders `path/` or `to/` don't already exist under `content/`, Hugo will create them automatically.
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 1. So let's create a new blog post by running:
   
@@ -126,7 +104,7 @@ If any of the folders `path/` or `to/` don't already exist under `content/`, Hug
 
 2. If you open this file, you will see that it is not empty!
   
-  ```source
+  ```text
   ---
   title: "My First Blog"
   date: 2021-05-06T13:40:20+01:00
@@ -137,14 +115,7 @@ If any of the folders `path/` or `to/` don't already exist under `content/`, Hug
   This is the metadata Hugo generates that we talked about before.
   Hugo has prefilled the `title` field from the name of the Markdown file, the timestamp of when the file was created, and it has automatically put the file into draft mode.
   
-  :::::::::::::::::::::::::::::::::::::::::  callout
-  
-  ## For your information
-  
-  Draft mode means that Hugo will **NOT** build and publish this file unless the `--buildDrafts [-D]` flag is passed to the `hugo server` command or the metadata is changed to `draft: false`
-  
-  
-  ::::::::::::::::::::::::::::::::::::::::::::::::::
+  Draft mode means that Hugo will **NOT** build and publish this file unless the `--buildDrafts [-D]` flag is passed to the `hugo server` command or the metadata is changed to `draft: false`.
   
   You can edit these fields as you wish.
   It is **strongly recommend** to update the `draft` field to `false` right now so that it will automatically build when this file is merged to `main`.
@@ -153,7 +124,7 @@ If any of the folders `path/` or `to/` don't already exist under `content/`, Hug
   Let's leave the message "Hello World! :earth\_africa:"
   All together, the file looks like this:
   
-  ```source
+  ```text
   ---
   title: "My First Blog"
   date: 2021-05-06T13:40:20+01:00
@@ -178,9 +149,7 @@ If any of the folders `path/` or `to/` don't already exist under `content/`, Hug
   hugo server
   ```
   
-  | ![](fig/blog_homepage_with_post.png){alt='homepage\_with\_blog\_post'}                                                                                  | 
-| :--------------------------------------------------------------------------------------------------------------: |
-| Homepage with a blog post listed                                                                                 | 
+  ![Homepage with a blog post listed ](fig/blog_homepage_with_post.png){alt='Homepage with a blog post listed '}                                                        
 
 **Close your browser window displaying your website and run <kbd>Ctrl</kbd>\+<kbd>C</kbd> in your terminal to stop the hugo server command.**
 
@@ -190,9 +159,7 @@ The beauty of using Markdown to build a blogsite is that it is a very simple fil
 However, blogs often contain *more* than just words (images, tweets, videos) and Markdown is not always equipped to cope with all of these extra sources.
 The solution would be to manually construct a HTML block to embed the content, which breaks the simplicity of the Markdown document.
 
-| ![](fig/html_embedding.png){alt='md\_with\_html'}                                                                                             | 
-| :--------------------------------------------------------------------------------------------------------------: |
-| An example of a Markdown file using HTML blocks to embed a Google calendar and Twitter timeline into a blog page | 
+![An example of a Markdown file using HTML blocks to embed a Google calendar and Twitter timeline into a blog page](fig/html_embedding.png){alt='An example of a Markdown file using HTML blocks to embed a Google calendar and Twitter timeline into a blog page'}                                                                        
 
 Hugo's solution to this problem is to provide a set of [shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) that handle this embedding in the backend for a range of external sources including instagram, twitter, youtube, and more.
 So let's experiment by adding a tweet to our blog post.
@@ -200,28 +167,26 @@ So let's experiment by adding a tweet to our blog post.
 Here is a tweet claiming how cool HelmUpgradeBot is: <https://twitter.com/drsarahlgibson/status/1390312389346828291>.
 All we need to embed this tweet into our blog post is the tweet ID (the **numeric** part of the tweet URL) and the user who tweeted it.
 
-| ![](fig/tweet_id.png){alt='tweet\_id'}                                                                                                 | 
-| :--------------------------------------------------------------------------------------------------------------: |
-| The ID of a tweet is the numerical section of the URL                                                            | 
+![The ID of a tweet is the numerical section of the URL](fig/tweet_id.png){alt='The ID of a tweet is the numerical section of the URL'}                                 
 
 The syntax for embedding a tweet is then:
 
 ```source
-{% raw %}{{< tweet user="TWIITER_USER_HERE" id="TWEET_ID_HERE" >}}{% endraw %}
+{{< tweet user="TWIITER_USER_HERE" id="TWEET_ID_HERE" >}}
 ```
 
 Which is much shorter than the corresponding HTML!
 
 So to add the above tweet to our blog post, edit the `content/blog/my-first-post.md` file again and add the following code to the end of the file.
 
-```source
-{% raw %}{{< tweet 1390312389346828291 >}}{% endraw %}
+```text
+{{< tweet 1390312389346828291 >}}
 ```
 
 All together, the file now looks like this:
 
-```source
-{% raw %}---
+```text
+---
 title: "My First Blog"
 date: 2021-05-06T13:40:20+01:00
 draft: false
@@ -229,7 +194,7 @@ draft: false
 
 Hello World! :earth_africa:
 
-{{< tweet 1390312389346828291 >}}{% endraw %}
+{{< tweet 1390312389346828291 >}}
 ```
 
 Save and close the file, then rerun `hugo server` and visit [http://localhost:1313](https://localhost:1313) in your browser again.
@@ -239,9 +204,7 @@ The tweet won't show up in the short summary of the blog post on the homepage, b
 hugo server
 ```
 
-| ![](fig/blog_with_tweet.png){alt='blog\_with\_embedded\_tweet'}                                                                                 | 
-| :--------------------------------------------------------------------------------------------------------------: |
-| Blog post with embedded tweet                                                                                    | 
+![Blog post with embedded tweet](fig/blog_with_tweet.png){alt='Blog post with embedded tweet'}                                                                          
 
 **Close your browser window displaying your website and run <kbd>Ctrl</kbd>\+<kbd>C</kbd> in your terminal to stop the hugo server command.**
 
@@ -252,18 +215,17 @@ Other shortcodes you will find useful are:
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## For your information
+## Adding own image to a site
 
 Want to add your own image to your site by committing it to GitHub?
 Add it to the `static/images` folder, as we did with the profile picture.
 You can then include the image using the standard Markdown syntax `![image_alt_text](images/my_image.png)`
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## For your information
+## Creating own shortcodes
 
 If you are feeling **super brave**, you can even [create your own shortcodes](https://gohugo.io/templates/shortcode-templates/) to embed specific content.
 Check out [some examples](https://github.com/sgibson91/sgibson91.github.io/tree/main/layouts/shortcodes).

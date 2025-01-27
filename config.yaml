@@ -20,7 +20,7 @@ carpentry: 'incubator'
 title: 'Blogging with Hugo and GitHub Pages'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 
+created: 2021-05-14 
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries'
@@ -87,7 +87,3 @@ profiles:
 # sandpaper and varnish versions) should live
 
 
-carpentry_description: Lesson Description
-url: 'https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages'
-analytics: carpentries
-lang: en

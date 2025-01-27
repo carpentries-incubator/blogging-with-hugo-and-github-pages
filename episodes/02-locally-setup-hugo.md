@@ -27,8 +27,8 @@ This is where we will make changes to our repository and initialise a new site u
 
 2. Change to a "sensible" directory somewhere on your filesystem
   
-  - This could be `Desktop`, or maybe you have a folder called `projects` - wherever makes sense to you is the right place to go!
-    In this example, we will use `source/github`.
+  This could be `Desktop`, or maybe you have a folder called `projects` - wherever makes sense to you is the right place to go!
+  In this example, we will use `source/github`.
   
   ```bash
   cd source/github
@@ -93,18 +93,12 @@ This is where we will make changes to our repository and initialise a new site u
   Visit https://gohugo.io/ for quickstart guide and full documentation.
   ```
   
-  :::::::::::::::::::::::::::::::::::::::::  callout
-  
-  ## For your information
-  
-  Some things to note about the above command:
+  **Note: ** some things to note about the above command:
   
   - The `.` means "Create the site right here please", not in another directory.
   - We needed to use the `--force` flag as hugo would have complained that our directory wasn't empty - remember the README and LICENSE?
     Using `--force` means that hugo will ignore those files when it generates the site.
     
-  
-  ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 7. Next we will add a theme.
   You can choose any of the free themes available at <https://themes.gohugo.io/> but, for this lesson, we will use [Anatole](https://themes.gohugo.io/anatole/).
@@ -124,15 +118,8 @@ This is where we will make changes to our repository and initialise a new site u
   Resolving deltas: 100% (844/844), done.
   ```
   
-  :::::::::::::::::::::::::::::::::::::::::  callout
+  **Note: ** now under the `themes/anatole` directory, we will have checked out a single reference of the anatole repository to build the content from.
   
-  ## For your information
-  
-  Now under the `themes/anatole` directory, we will have checked out a single reference of the anatole repository to build the content from.
-  
-  
-  ::::::::::::::::::::::::::::::::::::::::::::::::::
-
 8. Now we need to update `config.toml` to use the theme.
   Open up the file in your favourite text editor.
   This is how you would open it in `nano`.
@@ -189,15 +176,9 @@ This is where we will make changes to our repository and initialise a new site u
   
   **Make sure to save the file!**
   
-  ::::::::::::::::::::::::::::::::::::::  discussion
-  
-  ## Theme-specific configuration
-  
-  Some of the information you've been asked you to add to your `config.toml` file will be specific to the "anatole" theme and will not work if you swap themes.
+  **Note: ** Some of the information you've been asked you to add to your `config.toml` file is theme-specific configuration - i.e. it will be specific to the "anatole" theme and will not work if you swap themes. 
   You should always check the documentation and example site of the theme you wish to use as they will outline what fields can be used and what their expected values will be.
   
-  
-  ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 9. Now check your site builds by running the below command in your terminal, and then visiting [http://localhost:1313](https://localhost:1313) in your browser.
   
@@ -205,40 +186,32 @@ This is where we will make changes to our repository and initialise a new site u
   hugo server
   ```
   
-  ```
-  Start building sites …
-  ```
-
+  ```output
+Start building sites …
 WARN 2021/05/16 21:17:56 found no layout file for "HTML" for kind "home": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2021/05/16 21:17:56 found no layout file for "HTML" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2021/05/16 21:17:56 found no layout file for "HTML" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 
-```
-               | EN
-```
+                | EN
+-------------------+-----
+  Pages            |  3
+  Paginator pages  |  0
+  Non-page files   |  0
+  Static files     |  0
+  Processed images |  0
+  Aliases          |  0
+  Sitemaps         |  1
+  Cleaned          |  0
 
-\-------------------+-----
-Pages            |  3
-Paginator pages  |  0
-Non-page files   |  0
-Static files     |  0
-Processed images |  0
-Aliases          |  0
-Sitemaps         |  1
-Cleaned          |  0
-
-```
-Built in 4 ms
-Watching for changes in ~/source/github/HelmUpgradeBot/HelmUpgradeBot.github.io/{archetypes,content,data,layouts,static}
-Watching for config changes in ~/source/github/HelmUpgradeBot/HelmUpgradeBot.github.io/config.toml
-Environment: "development"
-Serving pages from memory
-Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
-Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-Press Ctrl+C to stop
-~~~
-{: .output}
-```
+ Built in 4 ms
+ Watching for changes in ~/source/github/HelmUpgradeBot/HelmUpgradeBot.github.io/{archetypes,content,data,layouts,static}
+ Watching for config changes in ~/source/github/HelmUpgradeBot/HelmUpgradeBot.github.io/config.toml
+ Environment: "development"
+ Serving pages from memory
+ Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+ Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+ Press Ctrl+C to stop
+  ```
 
 Our blog doesn't look very exciting yet, but it's good to know that it works! Let's save what we have and we will deploy it online in the next episode.
 

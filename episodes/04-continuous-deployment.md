@@ -24,7 +24,6 @@ In this episode, we will use [GitHub Actions](https://docs.github.com/en/actions
 The concept of Continuous Deployment is as follows:
 
 > For every change we integrate or merge into our GitHub repo, a fresh version of our website should be created and deployed automatically for us.
-> {: .quotation}
 
 1. Let's start by checking out a new branch in our local repo.
   
@@ -43,16 +42,9 @@ The concept of Continuous Deployment is as follows:
   mkdir -p .github/workflows
   ```
   
-  :::::::::::::::::::::::::::::::::::::::::  callout
-  
-  ## For your information
-  
-  The `-p` flag here means "If the parent directory doesn't already exist (i.e. `.github/`), then please create that too."
+  **Note:** the `-p` flag here means "If the parent directory doesn't already exist (i.e. `.github/`), then please create that too."
   Try running the above command without this flag first and see what error message you get!
   
-  
-  ::::::::::::::::::::::::::::::::::::::::::::::::::
-
 3. Create a `cd.yml` (`cd` is short for **C**ontinuous **D**eployment) file inside the `.github/workflows` folder.
   You can do this in the terminal with the below command.
   
@@ -71,25 +63,28 @@ The concept of Continuous Deployment is as follows:
 
 4. We have a workflow ready for us to use below which you should feel free to copy and paste into your `cd.yml` file, and then we'll go through each section.
 
-::::::::::::::::::::::::::::::::::::::  discussion
+::::::::::::::::::::::::::::::::::::::  challenge
 
-## Whitespace **matters** with YAML so be careful when you copy and paste!
+## Whitespace in YAML
 
 What does "whitespace matters" mean?
 Why is it important?
+
+::: solution
 
 It means that the spaces in the file carry meaning. A bit like how in Python if you indent lines then it knows they're part of a for loop.
 The way that a for loop ends is that you don't indent the next line.
 Think about replacing the whitespace (either spaces or tabs) with characters, such as dots.
 4 dots (....) which represent 4 spaces (    ) tells the file that this new information belongs to the line above.
 In some programming languages whitespace doesn't matter - newlines might matter but **where** you put the words is only important for what it looks like, not what actually happens.
-Python, Markdown, YAML all depend on whitespace to understand what the developer means.
 
+Python, Markdown, YAML all depend on whitespace to understand what the developer means - so be careful when you copy and paste!
+:::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ```yaml
-{% raw %}name: Build and Deploy Site
+name: Build and Deploy Site
 
 on:
   push:
@@ -129,7 +124,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public{% endraw %}
+          publish_dir: ./public
 ```
 
 - The `name` parameter defines what our workflow should be called
@@ -209,18 +204,14 @@ We now need to configure some more settings for the GitHub repo.
 3. We will add a branch protection rule to prevent changes that could break our site from being deployed.
   Click "Add rule".
   
-  | ![](fig/add_branch_protection_rule.png){alt='add\_branch\_protection\_rule'}          | 
-| :-----------------------------------------: |
-| Add a branch protection rule to the repo    | 
-
+  ![Adding a branch protection rule to the repo](fig/add_branch_protection_rule.png){alt='Adding a branch protection rule to the repo'}
+  
 4. In the "Branch pattern name" type `main`, then select the "Require status checks to pass before merging" box.
   Finally select the `build-and-deploy-site` status check from the list and click "Create" at the bottom of the page.
   (You may be asked to reenter your GitHub password.)
   This means that the `build-and-deploy-site` job **MUST** pass, otherwise merging the PR will be blocked.
   
-  | ![](fig/create_branch_protection_rule.png){alt='create\_branch\_protection\_rule'}       | 
-| :-----------------------------------------: |
-| Create the branch protection rule           | 
+  ![Creating the branch protection rule](fig/create_branch_protection_rule.png){alt='Creating the branch protection rule'}
 
 5. Now select the "Pages" option from the left-hand-side menu (second option from the bottom).
   This is where we configure GitHub Pages to host the website.
@@ -228,9 +219,7 @@ We now need to configure some more settings for the GitHub repo.
 6. In the "Source" section, select `gh-pages` from the "Branch" dropdown and leave the folder dropdown as `/ (root)`.
   Then click "Save".
   
-  | ![](fig/configure_github_pages.png){alt='configure\_github\_pages'}              | 
-| :-----------------------------------------: |
-| Configure GitHub Pages in the repo Settings | 
+  ![Configuring GitHub Pages in the repo Settings](fig/configure_github_pages.png){alt='Configuring GitHub Pages in the repo Settings'}
 
 7. After a few moments, refresh the page.
   The banner along the top should now be green and read "Your site is published at `https://HelmUpgradeBot.github.io`".
