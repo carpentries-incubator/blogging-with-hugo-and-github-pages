@@ -28,7 +28,13 @@
     <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/images.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/index.html</loc>
@@ -61,16 +67,34 @@
     <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/instructor/discuss.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/profiles.html</loc>
